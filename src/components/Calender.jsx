@@ -26,7 +26,7 @@ const CalendarComponent = () => {
   }));
 
   const handleSelectEvent = useCallback((event) => {
-    const formattedDate = moment(selectedDate).format("DD-MM-YYYY");
+    const formattedDate = moment(event.start).format("DD-MM-YYYY");
     const selectedData = data[formattedDate] || [];
 
     setChartData({
